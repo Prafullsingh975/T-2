@@ -8,14 +8,15 @@ import Todo from './components/Todo'
 import TodoList from './components/TodoList'
 
 function App() {
-  const [task,setTask] = useState("")
+  const [task,setTask] = useState("");
+  const [todos,setTodos] = useState([]);
 
   return (
     <>
       <div className='h-screen bg-gray-800 text-slate-100'>
         <Input taskk={task} setTask={setTask}/>
-        <Button />
-        <TodoList />
+        <Button setTodos ={setTodos} task={task} />
+        <TodoList todos = {todos}/>
       </div>
     </>
   )
